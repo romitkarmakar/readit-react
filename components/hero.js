@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-import $ from "jQuery";
+import $ from "jquery";
 import { Waypoint } from "react-waypoint";
 // const OwlCarousel = dynamic(import('react-owl-carousel'));
 
