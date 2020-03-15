@@ -1,203 +1,461 @@
-import Head from 'next/head'
+import React from "react";
+import dynamic from "next/dynamic";
+import Layout from "../components/layout";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import $ from "jQuery";
+import { Waypoint } from "react-waypoint";
+import Hero from "../components/hero";
+// const OwlCarousel = dynamic(import('react-owl-carousel'));
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+class IndexPage extends React.Component {
+  componentDidMount() {
+    AOS.init({
+      duration: 800,
+      easing: "slide"
+    });
+  }
 
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+  render() {
+    return (
+      <Layout>
+        <Hero />
+        <section id="blogs" className="ftco-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_1.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Illustration</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_2.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Application</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_3.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Design</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_4.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Illustration</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_5.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Illustration</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_6.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Illustration</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_7.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Illustration</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_8.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Illustration</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="case">
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-xl-8 d-flex">
+                      <a
+                        href="blog-single.html"
+                        className="img w-100 mb-3 mb-md-0"
+                        style={{ backgroundImage: "url(images/image_9.jpg)" }}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-4 d-flex">
+                      <div className="text w-100 pl-md-3">
+                        <span className="subheading">Illustration</span>
+                        <h2>
+                          <a href="blog-single.html">
+                            Build a website in minutes with Adobe Templates
+                          </a>
+                        </h2>
+                        <ul className="media-social list-unstyled">
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-twitter" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-facebook" />
+                            </a>
+                          </li>
+                          <li className="ftco-animate">
+                            <a href="#">
+                              <span className="icon-instagram" />
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="meta">
+                          <p className="mb-0">
+                            <a href="#">11/13/2019</a> |{" "}
+                            <a href="#">12 min read</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row mt-5">
+              <div className="col text-center">
+                <div className="block-27">
+                  <ul>
+                    <li>
+                      <a href="#">&lt;</a>
+                    </li>
+                    <li className="active">
+                      <span>1</span>
+                    </li>
+                    <li>
+                      <a href="#">2</a>
+                    </li>
+                    <li>
+                      <a href="#">3</a>
+                    </li>
+                    <li>
+                      <a href="#">4</a>
+                    </li>
+                    <li>
+                      <a href="#">5</a>
+                    </li>
+                    <li>
+                      <a href="#">&gt;</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Layout>
+    );
+  }
+}
 
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </a>
-      </div>
-    </main>
-
-    <footer>
-      <a
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-      </a>
-    </footer>
-
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </div>
-)
-
-export default Home
+export default IndexPage;
