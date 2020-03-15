@@ -1,8 +1,10 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { Waypoint } from "react-waypoint";
-import $ from "jquery"
-const OwlCarousel = dynamic(import("react-owl-carousel"));
+import $ from "jquery";
+const OwlCarousel = dynamic(import("react-owl-carousel"), {
+  ssr: false
+});
 
 export default class Clients extends React.Component {
   onFTCOEnter() {
