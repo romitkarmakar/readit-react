@@ -61,7 +61,7 @@ class NavBar extends React.Component {
         id="ftco-navbar"
       >
         <div className="container">
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" href="/">
             Read<i>it</i>.
           </a>
           <button
@@ -83,7 +83,7 @@ class NavBar extends React.Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a href="blog.html" className="nav-link">
+                <a href="blog" className="nav-link">
                   Articles
                 </a>
               </li>

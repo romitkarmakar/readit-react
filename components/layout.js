@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import NavBar from "./navbar";
 import Loader from "./loader";
+import Footer from "./footer"
 
 class Layout extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class Layout extends React.Component {
         <Loader />
         <NavBar />
         {this.props.children}
+        <Footer />
       </React.Fragment>
     );
   }
