@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import NavBar from "./navbar";
 import Loader from "./loader";
-import Footer from "./footer"
+import Footer from "./footer";
 
 class Layout extends React.Component {
   render() {
@@ -24,6 +24,9 @@ class Layout extends React.Component {
             <link rel="stylesheet" href="css/flaticon.css" />
             <link rel="stylesheet" href="css/icomoon.css" />
             <link rel="stylesheet" href="css/style.css" />
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
           </div>
         </Head>
         <Loader />
